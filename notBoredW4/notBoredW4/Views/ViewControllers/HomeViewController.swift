@@ -7,13 +7,12 @@
 
 import UIKit
 
-class HomeScreenViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "Background")!)
 
     }
 
-    
-    
 }

@@ -17,8 +17,8 @@
 		C57BB45327E5016700E5F7E8 /* ActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57BB45227E5016700E5F7E8 /* ActivityService.swift */; };
 		C57BB45827E50D9E00E5F7E8 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57BB45627E50D9E00E5F7E8 /* TestViewController.swift */; };
 		C57BB45927E50D9E00E5F7E8 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C57BB45727E50D9E00E5F7E8 /* TestViewController.xib */; };
-		E78273FF27ECCDA300D6A13D /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78273FD27ECCDA300D6A13D /* HomeScreenViewController.swift */; };
-		E782740027ECCDA300D6A13D /* HomeScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E78273FE27ECCDA300D6A13D /* HomeScreen.xib */; };
+		E782740327ECD62A00D6A13D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E782740127ECD62A00D6A13D /* HomeViewController.swift */; };
+		E782740427ECD62A00D6A13D /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E782740227ECD62A00D6A13D /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +36,8 @@
 		C57BB45727E50D9E00E5F7E8 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		C6D7200506EFD343496CBDDC /* Pods-notBoredW4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-notBoredW4.release.xcconfig"; path = "Target Support Files/Pods-notBoredW4/Pods-notBoredW4.release.xcconfig"; sourceTree = "<group>"; };
 		CFF84143C681030A274B013D /* Pods_notBoredW4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_notBoredW4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E78273FD27ECCDA300D6A13D /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
-		E78273FE27ECCDA300D6A13D /* HomeScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeScreen.xib; sourceTree = "<group>"; };
+		E782740127ECD62A00D6A13D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E782740227ECD62A00D6A13D /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				C57BB44D27E4FD0000E5F7E8 /* ViewControllers */,
-				E78273FE27ECCDA300D6A13D /* HomeScreen.xib */,
+				E782740227ECD62A00D6A13D /* HomeViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -125,7 +125,7 @@
 		C57BB44D27E4FD0000E5F7E8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E78273FD27ECCDA300D6A13D /* HomeScreenViewController.swift */,
+				E782740127ECD62A00D6A13D /* HomeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -208,8 +208,8 @@
 			files = (
 				C57BB44227E4FBF900E5F7E8 /* LaunchScreen.storyboard in Resources */,
 				C57BB43F27E4FBF900E5F7E8 /* Assets.xcassets in Resources */,
+				E782740427ECD62A00D6A13D /* HomeViewController.xib in Resources */,
 				C57BB45927E50D9E00E5F7E8 /* TestViewController.xib in Resources */,
-				E782740027ECCDA300D6A13D /* HomeScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,9 +265,9 @@
 				C57BB43627E4FBF900E5F7E8 /* AppDelegate.swift in Sources */,
 				C57BB44F27E4FD2700E5F7E8 /* Activity.swift in Sources */,
 				C57BB45327E5016700E5F7E8 /* ActivityService.swift in Sources */,
+				E782740327ECD62A00D6A13D /* HomeViewController.swift in Sources */,
 				C57BB45127E5005000E5F7E8 /* AlamofireAPIClient.swift in Sources */,
 				C57BB45827E50D9E00E5F7E8 /* TestViewController.swift in Sources */,
-				E78273FF27ECCDA300D6A13D /* HomeScreenViewController.swift in Sources */,
 				C57BB43827E4FBF900E5F7E8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
