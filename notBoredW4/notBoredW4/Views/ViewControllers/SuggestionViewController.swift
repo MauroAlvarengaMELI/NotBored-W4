@@ -15,7 +15,7 @@ class SuggestionViewController: UIViewController {
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var anotherButton: UIButton!
         
-    private var viewModel: HomeViewController!
+    private var viewModel: ActivityViewModel!
     private var participants: String?
     let userDefaults = UserDefaults()
 
@@ -35,7 +35,7 @@ class SuggestionViewController: UIViewController {
     }
     
     private func getActivity(){
-        viewModel.getActivity() { [weak self] in
+        viewModel?.getActivity() { [weak self] in
             guard let strongSelf = self else { return }
             strongSelf.setCurretView()
         }
@@ -43,7 +43,7 @@ class SuggestionViewController: UIViewController {
     
     private func setCurretView(){
 
-        activityLabel.text = viewModel.getCurrentActivity()
+        activityLabel.text = viewModel?.getCurrentActivity()
         setParticipants()
         // set price label
         let value = 0.0 //activity.price ?? 0.0 CHANGE VALUE

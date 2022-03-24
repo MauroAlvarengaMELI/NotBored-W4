@@ -29,6 +29,9 @@ class HomeViewController: UIViewController {
     @IBAction func didTapStartButton(_ sender: UIButton) {
         // TODO: Checkear validaciones
         // TODO: Navegar al TabViewController
+        let vc = SuggestionViewController(nibName: "SuggestionViewController", bundle: nil)
+        self.present(vc, animated: true)
+        
     }
     
     @IBAction func didEditParticipants(_ sender: UITextField) {
