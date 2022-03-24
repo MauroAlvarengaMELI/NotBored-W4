@@ -1,6 +1,0 @@
-framework module Pods_notBoredW4 {
-  umbrella header "Pods-notBoredW4-umbrella.h"
-
-  export *
-  module * { export * }
-}
