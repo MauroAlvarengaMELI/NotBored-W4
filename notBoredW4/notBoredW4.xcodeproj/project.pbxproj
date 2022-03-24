@@ -68,9 +68,6 @@
 		C57BB42927E4FBF900E5F7E8 = {
 			isa = PBXGroup;
 			children = (
-				C57BB44B27E4FCE300E5F7E8 /* Domian */,
-				C57BB44A27E4FCD100E5F7E8 /* Views */,
-				C57BB44927E4FCC300E5F7E8 /* Data */,
 				C57BB43427E4FBF900E5F7E8 /* notBoredW4 */,
 				C57BB43327E4FBF900E5F7E8 /* Products */,
 				6D98B41692C03113E22703E2 /* Pods */,
@@ -89,6 +86,10 @@
 		C57BB43427E4FBF900E5F7E8 /* notBoredW4 */ = {
 			isa = PBXGroup;
 			children = (
+				C57BB44A27E4FCD100E5F7E8 /* Views */,
+				E78273FC27ECCB0C00D6A13D /* ViewModel */,
+				E78273FB27ECCA5000D6A13D /* Domain */,
+				C57BB44927E4FCC300E5F7E8 /* Data */,
 				C57BB43527E4FBF900E5F7E8 /* AppDelegate.swift */,
 				C57BB43727E4FBF900E5F7E8 /* SceneDelegate.swift */,
 				C57BB43E27E4FBF900E5F7E8 /* Assets.xcassets */,
@@ -104,8 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				C57BB44E27E4FD2700E5F7E8 /* Activity.swift */,
-				C57BB45027E5005000E5F7E8 /* AlamofireAPIClient.swift */,
-				C57BB45227E5016700E5F7E8 /* ActivityService.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -114,23 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				C57BB44D27E4FD0000E5F7E8 /* ViewControllers */,
-				C57BB44C27E4FCF000E5F7E8 /* ViewModels */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		C57BB44B27E4FCE300E5F7E8 /* Domian */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Domian;
-			sourceTree = "<group>";
-		};
-		C57BB44C27E4FCF000E5F7E8 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		C57BB44D27E4FD0000E5F7E8 /* ViewControllers */ = {
@@ -138,6 +122,22 @@
 			children = (
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E78273FB27ECCA5000D6A13D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				C57BB45027E5005000E5F7E8 /* AlamofireAPIClient.swift */,
+				C57BB45227E5016700E5F7E8 /* ActivityService.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		E78273FC27ECCB0C00D6A13D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
