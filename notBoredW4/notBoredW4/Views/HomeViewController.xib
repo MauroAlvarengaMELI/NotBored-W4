@@ -10,6 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="notBoredW4" customModuleProvider="target">
             <connections>
+                <outlet property="participantsTextField" destination="uny-TC-Umk" id="YnI-Gb-zv7"/>
+                <outlet property="priceTextField" destination="OYX-OF-FcN" id="qcQ-Pr-hUI"/>
+                <outlet property="startButton" destination="K1N-4m-zb8" id="zDU-Mr-6qe"/>
+                <outlet property="termsSwitch" destination="ShC-FM-GqJ" id="bAv-Qz-GJk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -46,7 +50,7 @@
                             </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="TVu-go-LSg" userLabel="Inputs Stack View">
-                            <rect key="frame" x="0.0" y="320" width="364" height="153"/>
+                            <rect key="frame" x="0.0" y="318.5" width="364" height="153"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Participants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egX-mp-WHG">
                                     <rect key="frame" x="0.0" y="0.0" width="364" height="26"/>
@@ -57,7 +61,11 @@
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="# of participants" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="uny-TC-Umk">
                                     <rect key="frame" x="0.0" y="37" width="364" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                    <connections>
+                                        <action selector="didEditParticipants:" destination="-1" eventType="editingChanged" id="BI9-5b-grQ"/>
+                                        <action selector="didEndEditingParticipants:" destination="-1" eventType="editingDidEnd" id="Vhr-yU-Lqw"/>
+                                    </connections>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duy-QL-oaB">
                                     <rect key="frame" x="0.0" y="82" width="364" height="26"/>
@@ -68,43 +76,58 @@
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0 to 1" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="OYX-OF-FcN">
                                     <rect key="frame" x="0.0" y="119" width="364" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                    <connections>
+                                        <action selector="didEditPrice:" destination="-1" eventType="editingChanged" id="Imu-vW-ZT0"/>
+                                        <action selector="didEndEditingPrice:" destination="-1" eventType="editingDidEnd" id="khx-ws-RZ6"/>
+                                    </connections>
                                 </textField>
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hpD-AH-K84" userLabel="Footer Stack View">
-                            <rect key="frame" x="0.0" y="631" width="364" height="87"/>
+                            <rect key="frame" x="0.0" y="625" width="364" height="93"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1N-4m-zb8">
+                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1N-4m-zb8">
                                     <rect key="frame" x="50" y="0.0" width="264" height="45.5"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="filled" title="Start">
                                         <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                     </buttonConfiguration>
+                                    <connections>
+                                        <action selector="didTapStartButton:" destination="-1" eventType="touchUpInside" id="3IH-Pj-Cff"/>
+                                    </connections>
                                 </button>
-                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Wm7-n7-7Zz">
-                                    <rect key="frame" x="66" y="55.5" width="232" height="31.5"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Wm7-n7-7Zz">
+                                    <rect key="frame" x="57" y="55.5" width="250" height="37.5"/>
                                     <subviews>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ShC-FM-GqJ">
-                                            <rect key="frame" x="0.0" y="0.5" width="51" height="31"/>
+                                            <rect key="frame" x="0.0" y="3.5" width="51" height="31"/>
                                             <color key="tintColor" systemColor="systemBlueColor"/>
                                             <color key="onTintColor" systemColor="systemBlueColor"/>
+                                            <connections>
+                                                <action selector="didToggleSwitch:" destination="-1" eventType="valueChanged" id="7uB-1L-gMN"/>
+                                            </connections>
                                         </switch>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pS4-Gv-WQO">
-                                            <rect key="frame" x="57" y="4" width="175" height="23.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <attributedString key="attributedText">
-                                                <fragment content="Terms and Conditions">
-                                                    <attributes>
-                                                        <color key="NSColor" systemColor="systemBlueColor"/>
-                                                        <font key="NSFont" size="18" name="Futura-Medium"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        <integer key="NSUnderline" value="1"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kd4-Iv-ejZ">
+                                            <rect key="frame" x="51" y="0.0" width="199" height="37.5"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain">
+                                                <attributedString key="attributedTitle">
+                                                    <fragment content="Terms and Conditions">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.0" green="0.47843000000000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="18" name="Futura-Medium"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                            <integer key="NSUnderline" value="1"/>
+                                                            <color key="NSUnderlineColor" red="0.0" green="0.47843000000000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                            </buttonConfiguration>
+                                            <connections>
+                                                <action selector="didTapTermsAndConditions:" destination="-1" eventType="touchUpInside" id="1Tp-Lk-9BR"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </stackView>
                             </subviews>
