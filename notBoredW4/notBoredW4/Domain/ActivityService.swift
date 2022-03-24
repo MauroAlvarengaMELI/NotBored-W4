@@ -9,10 +9,6 @@ import Foundation
 import Alamofire
 
 class ActivityService {
-
-//    private struct ReceivedActivity: Codable {
-//        let results: [Activity]
-//    }
     
     let apiClient = AlamofireAPIClient()
 

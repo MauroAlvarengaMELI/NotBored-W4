@@ -15,8 +15,12 @@
 		C57BB44F27E4FD2700E5F7E8 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57BB44E27E4FD2700E5F7E8 /* Activity.swift */; };
 		C57BB45127E5005000E5F7E8 /* AlamofireAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57BB45027E5005000E5F7E8 /* AlamofireAPIClient.swift */; };
 		C57BB45327E5016700E5F7E8 /* ActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57BB45227E5016700E5F7E8 /* ActivityService.swift */; };
-		C57BB45827E50D9E00E5F7E8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57BB45627E50D9E00E5F7E8 /* HomeViewController.swift */; };
-		C57BB45927E50D9E00E5F7E8 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C57BB45727E50D9E00E5F7E8 /* HomeViewController.xib */; };
+		C57BB45827E50D9E00E5F7E8 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57BB45627E50D9E00E5F7E8 /* TestViewController.swift */; };
+		C57BB45927E50D9E00E5F7E8 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C57BB45727E50D9E00E5F7E8 /* TestViewController.xib */; };
+		E73873D327ED12EF00E2890D /* TermsAndConditions.xib in Resources */ = {isa = PBXBuildFile; fileRef = E73873D227ED12EF00E2890D /* TermsAndConditions.xib */; };
+		E73873D527ED168100E2890D /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73873D427ED168100E2890D /* TermsAndConditionsViewController.swift */; };
+		E782740327ECD62A00D6A13D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E782740127ECD62A00D6A13D /* HomeViewController.swift */; };
+		E782740427ECD62A00D6A13D /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E782740227ECD62A00D6A13D /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,10 +34,14 @@
 		C57BB44E27E4FD2700E5F7E8 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		C57BB45027E5005000E5F7E8 /* AlamofireAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAPIClient.swift; sourceTree = "<group>"; };
 		C57BB45227E5016700E5F7E8 /* ActivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityService.swift; sourceTree = "<group>"; };
-		C57BB45627E50D9E00E5F7E8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		C57BB45727E50D9E00E5F7E8 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		C57BB45627E50D9E00E5F7E8 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		C57BB45727E50D9E00E5F7E8 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		C6D7200506EFD343496CBDDC /* Pods-notBoredW4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-notBoredW4.release.xcconfig"; path = "Target Support Files/Pods-notBoredW4/Pods-notBoredW4.release.xcconfig"; sourceTree = "<group>"; };
 		CFF84143C681030A274B013D /* Pods_notBoredW4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_notBoredW4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E73873D227ED12EF00E2890D /* TermsAndConditions.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TermsAndConditions.xib; sourceTree = "<group>"; };
+		E73873D427ED168100E2890D /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
+		E782740127ECD62A00D6A13D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E782740227ECD62A00D6A13D /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,9 +76,6 @@
 		C57BB42927E4FBF900E5F7E8 = {
 			isa = PBXGroup;
 			children = (
-				C57BB44B27E4FCE300E5F7E8 /* Domian */,
-				C57BB44A27E4FCD100E5F7E8 /* Views */,
-				C57BB44927E4FCC300E5F7E8 /* Data */,
 				C57BB43427E4FBF900E5F7E8 /* notBoredW4 */,
 				C57BB43327E4FBF900E5F7E8 /* Products */,
 				6D98B41692C03113E22703E2 /* Pods */,
@@ -89,13 +94,17 @@
 		C57BB43427E4FBF900E5F7E8 /* notBoredW4 */ = {
 			isa = PBXGroup;
 			children = (
+				C57BB44A27E4FCD100E5F7E8 /* Views */,
+				E78273FC27ECCB0C00D6A13D /* ViewModel */,
+				E78273FB27ECCA5000D6A13D /* Domain */,
+				C57BB44927E4FCC300E5F7E8 /* Data */,
 				C57BB43527E4FBF900E5F7E8 /* AppDelegate.swift */,
 				C57BB43727E4FBF900E5F7E8 /* SceneDelegate.swift */,
 				C57BB43E27E4FBF900E5F7E8 /* Assets.xcassets */,
 				C57BB44027E4FBF900E5F7E8 /* LaunchScreen.storyboard */,
 				C57BB44327E4FBF900E5F7E8 /* Info.plist */,
-				C57BB45627E50D9E00E5F7E8 /* HomeViewController.swift */,
-				C57BB45727E50D9E00E5F7E8 /* HomeViewController.xib */,
+				C57BB45627E50D9E00E5F7E8 /* TestViewController.swift */,
+				C57BB45727E50D9E00E5F7E8 /* TestViewController.xib */,
 			);
 			path = notBoredW4;
 			sourceTree = "<group>";
@@ -104,8 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				C57BB44E27E4FD2700E5F7E8 /* Activity.swift */,
-				C57BB45027E5005000E5F7E8 /* AlamofireAPIClient.swift */,
-				C57BB45227E5016700E5F7E8 /* ActivityService.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -114,30 +121,35 @@
 			isa = PBXGroup;
 			children = (
 				C57BB44D27E4FD0000E5F7E8 /* ViewControllers */,
-				C57BB44C27E4FCF000E5F7E8 /* ViewModels */,
+				E782740227ECD62A00D6A13D /* HomeViewController.xib */,
+				E73873D227ED12EF00E2890D /* TermsAndConditions.xib */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		C57BB44B27E4FCE300E5F7E8 /* Domian */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Domian;
-			sourceTree = "<group>";
-		};
-		C57BB44C27E4FCF000E5F7E8 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		C57BB44D27E4FD0000E5F7E8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E73873D427ED168100E2890D /* TermsAndConditionsViewController.swift */,
+				E782740127ECD62A00D6A13D /* HomeViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E78273FB27ECCA5000D6A13D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				C57BB45027E5005000E5F7E8 /* AlamofireAPIClient.swift */,
+				C57BB45227E5016700E5F7E8 /* ActivityService.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		E78273FC27ECCB0C00D6A13D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,8 +213,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C57BB44227E4FBF900E5F7E8 /* LaunchScreen.storyboard in Resources */,
+				E73873D327ED12EF00E2890D /* TermsAndConditions.xib in Resources */,
 				C57BB43F27E4FBF900E5F7E8 /* Assets.xcassets in Resources */,
-				C57BB45927E50D9E00E5F7E8 /* HomeViewController.xib in Resources */,
+				E782740427ECD62A00D6A13D /* HomeViewController.xib in Resources */,
+				C57BB45927E50D9E00E5F7E8 /* TestViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,11 +269,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E73873D527ED168100E2890D /* TermsAndConditionsViewController.swift in Sources */,
 				C57BB43627E4FBF900E5F7E8 /* AppDelegate.swift in Sources */,
 				C57BB44F27E4FD2700E5F7E8 /* Activity.swift in Sources */,
 				C57BB45327E5016700E5F7E8 /* ActivityService.swift in Sources */,
+				E782740327ECD62A00D6A13D /* HomeViewController.swift in Sources */,
 				C57BB45127E5005000E5F7E8 /* AlamofireAPIClient.swift in Sources */,
-				C57BB45827E50D9E00E5F7E8 /* HomeViewController.swift in Sources */,
+				C57BB45827E50D9E00E5F7E8 /* TestViewController.swift in Sources */,
 				C57BB43827E4FBF900E5F7E8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
