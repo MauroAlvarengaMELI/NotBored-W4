@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class TestViewController: UIViewController {
     
     private var currentActivity: Activity?
     private let activityService = ActivityService()
