@@ -18,6 +18,7 @@ class ActivitiesTableViewController: UITableViewController {
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.backgroundColor = UIColor(patternImage: UIImage(named: "Background")!)
         getActivitiesList()
     }
 
