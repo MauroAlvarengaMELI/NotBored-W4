@@ -11,7 +11,8 @@ class ActivitiesTableViewController: UITableViewController {
         
     @IBOutlet var activityTable: UITableView!
     
-//    private var viewModel: ActivitiesViewModel?
+    private var viewModel: ActivityViewModel = ActivityViewModel(service: ActivityService())
+    private let categories: [String] = ["Education", "Recreational", "Social", "Diy", "Charity", "Cooking", "Relaxation", "Music", "Busywork"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,38 +20,36 @@ class ActivitiesTableViewController: UITableViewController {
         self.tableView.delegate = self
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.backgroundColor = UIColor(patternImage: UIImage(named: "Background")!)
-        getActivitiesList()
+        getCategoryList()
     }
 
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        viewModel?.getActivitiesCount() ?? 1
-        return 1 // Delete
+        return categories.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.backgroundColor = .white
+        cell.backgroundColor = UIColor(patternImage: UIImage(named: "Background")!)
         cell.textLabel?.font = UIFont(name: "Futura", size: 24)
         cell.textLabel?.textColor = .black
-//        cell.textLabel?.text = viewModel?.getActivity2(at: indexPath.row).name
+        cell.textLabel?.text = categories[indexPath.row]
         return cell
     }
     
-    func getActivitiesList() {
-//        viewModel?.getActivities { [weak self] in
-//            self?.tableView.reloadData()
-//        }
+    func getCategoryList() {
+        viewModel.getActivity { [weak self] in
+            self?.tableView.reloadData()
+        }
     }
     
     func showActivities(for activity: Activity) {
         let suggestionView = SuggestionViewController(nibName: "SuggestionViewController", bundle: nil)
         suggestionView.title = activity.activity
-        
         navigationController?.pushViewController(suggestionView, animated: true)
     }
     

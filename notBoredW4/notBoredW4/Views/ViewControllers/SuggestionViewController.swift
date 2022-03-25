@@ -22,8 +22,9 @@ class SuggestionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        categoryStack.isHidden = true
+        categoryStack.isHidden = false
         setupView()
+        getActivity()
     }
     
     private func setupView(){
@@ -32,21 +33,21 @@ class SuggestionViewController: UIViewController {
         anotherButton.layer.cornerRadius = 10
         anotherButton.setTitleColor(UIColor.white, for: .normal)
         anotherButton.backgroundColor = .systemBlue
-        setCurretView()
     }
     
     private func getActivity(){
         viewModel.getActivity() { [weak self] in
             guard let strongSelf = self else { return }
             strongSelf.activityLabel.text = strongSelf.viewModel.getCurrentActivity()
+            strongSelf.participantsNumberLabel.text = ("\(strongSelf.viewModel.getParticipants())")
+            strongSelf.setPrice()
+            strongSelf.getCategory()
         }
     }
     
-    private func setCurretView(){
-        getActivity()
-        setParticipants()
+    private func setPrice(){
         // set price label
-        let value = 0.0 //activity.price ?? 0.0 CHANGE VALUE
+        let value = viewModel.getPrice()
         if value == 0.0 {
             priceLabel.text = "Free"
         } else if value <= 0.3 {
@@ -58,19 +59,10 @@ class SuggestionViewController: UIViewController {
         }
     }
     
-    private func setParticipants(){
-        if participants != nil {
-            participantsNumberLabel.text = ("\(self.participants)")
-        } else {
-            participantsNumberLabel.text = ("\(0)")
-        }
-        
-    }
-    
-    private func isCategory(for activity: Activity) {
-        let category = activity.type
-        if category != nil || category != "" {
-            categoryLabel.text = activity.type
+    private func getCategory() {
+        let category = viewModel.getCategories()
+        if category != "" {
+            categoryLabel.text = viewModel.getCategories()
             categoryStack.isHidden = false
         }
     }

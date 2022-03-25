@@ -28,8 +28,28 @@ class ActivityViewModel {
         if let activity = self.currentActivity {
             return activity.activity ?? " "
         }
-        return "Error getting Activity"
+        return "Error getting the activity"
     }
     
+    func getParticipants() -> Int {
+        if let activity = self.currentActivity {
+            return activity.participants ?? 0
+        }
+        return 0
+    }
+    
+    func getPrice() -> Double {
+        if let activity = self.currentActivity {
+            return activity.price ?? 0.0
+        }
+        return 0.0
+    }
+    
+    func getCategories() -> String {
+        if let activity = self.currentActivity {
+            return activity.type ?? " "
+        }
+        return "Error getting the category"
+    }
 }
 

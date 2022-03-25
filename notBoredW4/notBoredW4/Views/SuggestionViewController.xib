@@ -121,7 +121,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icT-O8-Ual">
-                    <rect key="frame" x="143" y="74" width="128" height="36.5"/>
+                    <rect key="frame" x="20" y="74" width="374" height="36.5"/>
                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -131,8 +131,10 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <color key="tintColor" name="AccentColor"/>
             <constraints>
+                <constraint firstItem="icT-O8-Ual" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="EWz-f3-vam"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IFv-Dv-ODH" secondAttribute="trailing" constant="60" id="LYa-TG-s6H"/>
                 <constraint firstItem="icT-O8-Ual" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="b7Z-4v-VS8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="icT-O8-Ual" secondAttribute="trailing" constant="20" id="cEN-ce-5oE"/>
                 <constraint firstItem="pwg-JN-EOb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dQd-MZ-mz2"/>
                 <constraint firstItem="IFv-Dv-ODH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="gnj-R2-hWa"/>
                 <constraint firstItem="icT-O8-Ual" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="kkd-jd-gdb"/>
@@ -142,6 +144,7 @@
             </constraints>
             <variation key="default">
                 <mask key="constraints">
+                    <exclude reference="b7Z-4v-VS8"/>
                     <exclude reference="lin-9G-SP3"/>
                 </mask>
             </variation>
