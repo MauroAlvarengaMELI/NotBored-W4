@@ -19,6 +19,12 @@
 		C57BB45927E50D9E00E5F7E8 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C57BB45727E50D9E00E5F7E8 /* TestViewController.xib */; };
 		E73873D327ED12EF00E2890D /* TermsAndConditions.xib in Resources */ = {isa = PBXBuildFile; fileRef = E73873D227ED12EF00E2890D /* TermsAndConditions.xib */; };
 		E73873D527ED168100E2890D /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73873D427ED168100E2890D /* TermsAndConditionsViewController.swift */; };
+		E73873D827ED23E400E2890D /* SuggestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E73873D627ED23E400E2890D /* SuggestionViewController.xib */; };
+		E73873D927ED23E400E2890D /* ActivitiesTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E73873D727ED23E400E2890D /* ActivitiesTableViewController.xib */; };
+		E73873DC27ED23FA00E2890D /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73873DA27ED23FA00E2890D /* SuggestionViewController.swift */; };
+		E73873DD27ED23FA00E2890D /* ActivitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73873DB27ED23FA00E2890D /* ActivitiesTableViewController.swift */; };
+		E73873DF27ED248A00E2890D /* ActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73873DE27ED248A00E2890D /* ActivityViewModel.swift */; };
+		E73873E227EE0B8B00E2890D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73873E027EE0B8B00E2890D /* TabBarViewController.swift */; };
 		E782740327ECD62A00D6A13D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E782740127ECD62A00D6A13D /* HomeViewController.swift */; };
 		E782740427ECD62A00D6A13D /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E782740227ECD62A00D6A13D /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
@@ -40,6 +46,12 @@
 		CFF84143C681030A274B013D /* Pods_notBoredW4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_notBoredW4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E73873D227ED12EF00E2890D /* TermsAndConditions.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TermsAndConditions.xib; sourceTree = "<group>"; };
 		E73873D427ED168100E2890D /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
+		E73873D627ED23E400E2890D /* SuggestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuggestionViewController.xib; sourceTree = "<group>"; };
+		E73873D727ED23E400E2890D /* ActivitiesTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivitiesTableViewController.xib; sourceTree = "<group>"; };
+		E73873DA27ED23FA00E2890D /* SuggestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionViewController.swift; sourceTree = "<group>"; };
+		E73873DB27ED23FA00E2890D /* ActivitiesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesTableViewController.swift; sourceTree = "<group>"; };
+		E73873DE27ED248A00E2890D /* ActivityViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityViewModel.swift; path = notBoredW4/Views/ActivityViewModel.swift; sourceTree = SOURCE_ROOT; };
+		E73873E027EE0B8B00E2890D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		E782740127ECD62A00D6A13D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E782740227ECD62A00D6A13D /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +135,8 @@
 				C57BB44D27E4FD0000E5F7E8 /* ViewControllers */,
 				E782740227ECD62A00D6A13D /* HomeViewController.xib */,
 				E73873D227ED12EF00E2890D /* TermsAndConditions.xib */,
+				E73873D727ED23E400E2890D /* ActivitiesTableViewController.xib */,
+				E73873D627ED23E400E2890D /* SuggestionViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -132,6 +146,9 @@
 			children = (
 				E73873D427ED168100E2890D /* TermsAndConditionsViewController.swift */,
 				E782740127ECD62A00D6A13D /* HomeViewController.swift */,
+				E73873DB27ED23FA00E2890D /* ActivitiesTableViewController.swift */,
+				E73873DA27ED23FA00E2890D /* SuggestionViewController.swift */,
+				E73873E027EE0B8B00E2890D /* TabBarViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -148,6 +165,7 @@
 		E78273FC27ECCB0C00D6A13D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E73873DE27ED248A00E2890D /* ActivityViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -215,7 +233,9 @@
 				C57BB44227E4FBF900E5F7E8 /* LaunchScreen.storyboard in Resources */,
 				E73873D327ED12EF00E2890D /* TermsAndConditions.xib in Resources */,
 				C57BB43F27E4FBF900E5F7E8 /* Assets.xcassets in Resources */,
+				E73873D927ED23E400E2890D /* ActivitiesTableViewController.xib in Resources */,
 				E782740427ECD62A00D6A13D /* HomeViewController.xib in Resources */,
+				E73873D827ED23E400E2890D /* SuggestionViewController.xib in Resources */,
 				C57BB45927E50D9E00E5F7E8 /* TestViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,10 +293,14 @@
 				C57BB43627E4FBF900E5F7E8 /* AppDelegate.swift in Sources */,
 				C57BB44F27E4FD2700E5F7E8 /* Activity.swift in Sources */,
 				C57BB45327E5016700E5F7E8 /* ActivityService.swift in Sources */,
+				E73873E227EE0B8B00E2890D /* TabBarViewController.swift in Sources */,
 				E782740327ECD62A00D6A13D /* HomeViewController.swift in Sources */,
 				C57BB45127E5005000E5F7E8 /* AlamofireAPIClient.swift in Sources */,
+				E73873DD27ED23FA00E2890D /* ActivitiesTableViewController.swift in Sources */,
+				E73873DF27ED248A00E2890D /* ActivityViewModel.swift in Sources */,
 				C57BB45827E50D9E00E5F7E8 /* TestViewController.swift in Sources */,
 				C57BB43827E4FBF900E5F7E8 /* SceneDelegate.swift in Sources */,
+				E73873DC27ED23FA00E2890D /* SuggestionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

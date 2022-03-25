@@ -45,8 +45,6 @@
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="x3k-1Z-OTk" secondAttribute="trailing" constant="75" id="Shu-Db-opB"/>
                                 <constraint firstItem="x3k-1Z-OTk" firstAttribute="leading" secondItem="dMB-xO-Ww7" secondAttribute="leading" constant="75" id="WCs-iU-7GX"/>
-                                <constraint firstItem="Suy-xh-147" firstAttribute="top" secondItem="x3k-1Z-OTk" secondAttribute="bottom" constant="20" id="vCl-sv-WxK"/>
-                                <constraint firstItem="x3k-1Z-OTk" firstAttribute="top" secondItem="dMB-xO-Ww7" secondAttribute="top" constant="20" id="zFy-ip-de3"/>
                             </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="TVu-go-LSg" userLabel="Inputs Stack View">
@@ -63,7 +61,6 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     <connections>
-                                        <action selector="didEditParticipants:" destination="-1" eventType="editingChanged" id="BI9-5b-grQ"/>
                                         <action selector="didEndEditingParticipants:" destination="-1" eventType="editingDidEnd" id="Vhr-yU-Lqw"/>
                                     </connections>
                                 </textField>
@@ -78,7 +75,6 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     <connections>
-                                        <action selector="didEditPrice:" destination="-1" eventType="editingChanged" id="Imu-vW-ZT0"/>
                                         <action selector="didEndEditingPrice:" destination="-1" eventType="editingDidEnd" id="khx-ws-RZ6"/>
                                     </connections>
                                 </textField>
