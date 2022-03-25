@@ -16,7 +16,7 @@ class SuggestionViewController: UIViewController {
     @IBOutlet weak var anotherButton: UIButton!
     @IBOutlet weak var categoryStack: UIStackView!
     
-    private var viewModel: ActivityViewModel!
+    private var viewModel: ActivityViewModel = ActivityViewModel(service: ActivityService())
     let userDefaults = UserDefaults()
     var participants: Int?
 
@@ -36,7 +36,7 @@ class SuggestionViewController: UIViewController {
     }
     
     private func getActivity(){
-        viewModel?.getActivity() { [weak self] in
+        viewModel.getActivity() { [weak self] in
             guard let strongSelf = self else { return }
             strongSelf.activityLabel.text = strongSelf.viewModel.getCurrentActivity()
         }

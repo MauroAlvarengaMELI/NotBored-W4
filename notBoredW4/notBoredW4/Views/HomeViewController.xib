@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -45,8 +45,6 @@
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="x3k-1Z-OTk" secondAttribute="trailing" constant="75" id="Shu-Db-opB"/>
                                 <constraint firstItem="x3k-1Z-OTk" firstAttribute="leading" secondItem="dMB-xO-Ww7" secondAttribute="leading" constant="75" id="WCs-iU-7GX"/>
-                                <constraint firstItem="Suy-xh-147" firstAttribute="top" secondItem="x3k-1Z-OTk" secondAttribute="bottom" constant="20" id="vCl-sv-WxK"/>
-                                <constraint firstItem="x3k-1Z-OTk" firstAttribute="top" secondItem="dMB-xO-Ww7" secondAttribute="top" constant="20" id="zFy-ip-de3"/>
                             </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="TVu-go-LSg" userLabel="Inputs Stack View">

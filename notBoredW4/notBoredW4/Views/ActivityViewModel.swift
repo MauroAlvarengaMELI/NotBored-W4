@@ -28,7 +28,7 @@ class ActivityViewModel {
         if let activity = self.currentActivity {
             return activity.activity ?? " "
         }
-        return "Error getting question"
+        return "Error getting Activity"
     }
     
 }

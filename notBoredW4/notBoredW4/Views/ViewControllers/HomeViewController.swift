@@ -30,7 +30,8 @@ class HomeViewController: UIViewController {
         // TODO: Checkear validaciones
         // TODO: Navegar al TabViewController
         let vc = SuggestionViewController(nibName: "SuggestionViewController", bundle: nil)
-        self.present(vc, animated: true)
+        let vc2 = ActivitiesTableViewController(nibName: "ActivitiesTableViewController", bundle: nil)
+        self.present(vc2, animated: true)
         
     }
     
@@ -43,30 +44,38 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func didEndEditingParticipants(_ sender: Any) {
-        if termsSwitch.isOn {
-            startButton.isEnabled = true
-        }
+        validate()
     }
     
     @IBAction func didEndEditingPrice(_ sender: Any) {
         if participantsTextField.hasText && termsSwitch.isOn {
             startButton.isEnabled = true
+        }  else {
+            startButton.isEnabled = false
         }
     }
     
     @IBAction func didToggleSwitch(_ sender: UISwitch) {
-        if participantsTextField.hasText {
+        if !termsSwitch.isOn {
+            startButton.isEnabled = false
+        } else if participantsTextField.hasText {
             startButton.isEnabled = true
         }
     }
     
     @IBAction func didTapTermsAndConditions(_ sender: UIButton) {
-        // Abrir Terminos y Condiciones
+        // Show Terms and Conditions View
         let vc = TermsAndConditionsViewController(nibName: "TermsAndConditions", bundle: nil)
-        //vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }
     
+    private func validate() {
+        if participantsTextField.hasText && termsSwitch.isOn {
+            startButton.isEnabled = true
+        } else {
+            startButton.isEnabled = false
+        }
+    }
     
 }
 
