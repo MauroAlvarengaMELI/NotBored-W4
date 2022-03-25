@@ -19,12 +19,17 @@ class SuggestionViewController: UIViewController {
     private var viewModel: ActivityViewModel = ActivityViewModel(service: ActivityService())
     let userDefaults = UserDefaults()
     var participants: Int?
+    var price: Double?
+    var type: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        categoryStack.isHidden = false
         setupView()
+        getParticipantsAndPrice()
         getActivity()
+        
+        
+        categoryStack.isHidden = false
     }
     
     private func setupView(){
@@ -36,7 +41,10 @@ class SuggestionViewController: UIViewController {
     }
     
     private func getActivity(){
-        viewModel.getActivity() { [weak self] in
+        guard let participants = participants else {
+            return
+        }
+        viewModel.getActivity(forType: self.type, participants: participants) { [weak self] in
             guard let strongSelf = self else { return }
             strongSelf.activityLabel.text = strongSelf.viewModel.getCurrentActivity()
             strongSelf.participantsNumberLabel.text = ("\(strongSelf.viewModel.getParticipants())")
@@ -62,9 +70,14 @@ class SuggestionViewController: UIViewController {
     private func getCategory() {
         let category = viewModel.getCategories()
         if category != "" {
-            categoryLabel.text = viewModel.getCategories()
+            categoryLabel.text = viewModel.getCategories().capitalized
             categoryStack.isHidden = false
         }
+    }
+    
+    private func getParticipantsAndPrice() {
+        self.participants = userDefaults.integer(forKey: "participants")
+        //guard let price = userDefaults.double(forKey: "price") else { return }
     }
 
     @IBAction func anotherButtonAction(_ sender: UIButton) {

@@ -16,10 +16,20 @@ class ActivityViewModel {
         self.activityService = service
     }
     
-    func getActivity(completion: @escaping () -> Void) {
-        activityService.getActivity() { [weak self] receivedActivity in
+//    func getActivity(participants: Int, completion: @escaping () -> Void) {
+//        activityService.getActivity(participants: participants) { [weak self] receivedActivity in
+//            guard let strongSelf = self else { return }
+//            strongSelf.currentActivity = receivedActivity
+//            completion()
+//        }
+//    }
+    
+    func getActivity(forType type: String, participants: Int, completion: @escaping () -> Void) {
+        activityService.getActivity(forType: type, participants: participants) { [weak self] receivedActivity in
             guard let strongSelf = self else { return }
-            strongSelf.currentActivity = receivedActivity
+            if receivedActivity.activity != strongSelf.currentActivity?.activity {
+                strongSelf.currentActivity = receivedActivity
+            }
             completion()
         }
     }

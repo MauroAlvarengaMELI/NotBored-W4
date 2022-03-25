@@ -61,7 +61,6 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     <connections>
-                                        <action selector="didEditParticipants:" destination="-1" eventType="editingChanged" id="BI9-5b-grQ"/>
                                         <action selector="didEndEditingParticipants:" destination="-1" eventType="editingDidEnd" id="Vhr-yU-Lqw"/>
                                     </connections>
                                 </textField>
@@ -76,7 +75,6 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     <connections>
-                                        <action selector="didEditPrice:" destination="-1" eventType="editingChanged" id="Imu-vW-ZT0"/>
                                         <action selector="didEndEditingPrice:" destination="-1" eventType="editingDidEnd" id="khx-ws-RZ6"/>
                                     </connections>
                                 </textField>
