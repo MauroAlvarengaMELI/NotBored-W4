@@ -14,21 +14,22 @@ class SuggestionViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var anotherButton: UIButton!
-        
+    @IBOutlet weak var categoryStack: UIStackView!
+    
     private var viewModel: ActivityViewModel!
-    private var participants: String?
     let userDefaults = UserDefaults()
+    var participants: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        categoryLabel.isHidden = true
+        categoryStack.isHidden = true
         setupView()
-        getActivity()
     }
     
     private func setupView(){
         // set the visual values of the button
-        anotherButton.layer.cornerRadius = 50
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "Background")!)
+        anotherButton.layer.cornerRadius = 10
         anotherButton.setTitleColor(UIColor.white, for: .normal)
         anotherButton.backgroundColor = .systemBlue
         setCurretView()
@@ -37,13 +38,12 @@ class SuggestionViewController: UIViewController {
     private func getActivity(){
         viewModel?.getActivity() { [weak self] in
             guard let strongSelf = self else { return }
-            strongSelf.setCurretView()
+            strongSelf.activityLabel.text = strongSelf.viewModel.getCurrentActivity()
         }
     }
     
     private func setCurretView(){
-
-        activityLabel.text = viewModel?.getCurrentActivity()
+        getActivity()
         setParticipants()
         // set price label
         let value = 0.0 //activity.price ?? 0.0 CHANGE VALUE
@@ -59,17 +59,19 @@ class SuggestionViewController: UIViewController {
     }
     
     private func setParticipants(){
-        if let participantSet = userDefaults.string(forKey: "username") {
-            self.participants = participantSet
-            self.participantsNumberLabel.text = participantSet
+        if participants != nil {
+            participantsNumberLabel.text = ("\(self.participants)")
+        } else {
+            participantsNumberLabel.text = ("\(0)")
         }
+        
     }
     
     private func isCategory(for activity: Activity) {
         let category = activity.type
         if category != nil || category != "" {
             categoryLabel.text = activity.type
-            categoryLabel.isHidden = false
+            categoryStack.isHidden = false
         }
     }
 
