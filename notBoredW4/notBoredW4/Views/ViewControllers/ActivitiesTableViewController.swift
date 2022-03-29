@@ -48,12 +48,4 @@ class ActivitiesTableViewController: UITableViewController {
         navigationController?.pushViewController(suggestionView, animated: true)
     }
     
-//    func showQuestions(for category: Category) {
-//        let questionViewController = QuestionViewController(nibName: "QuestionViewController", bundle: nil)
-//        questionViewController.title = category.name
-//        questionViewController.categoryID = category.id
-//
-//        navigationController?.pushViewController(questionViewController, animated: true)
-//    }
-    
 }

@@ -15,4 +15,5 @@ struct Activity: Codable {
     var price: Double?
     var link: String?
     var key: String?
+    var error: String?
 }
