@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="notBoredW4" customModuleProvider="target">
             <connections>
                 <outlet property="participantsTextField" destination="uny-TC-Umk" id="YnI-Gb-zv7"/>
+                <outlet property="priceLabel" destination="duy-QL-oaB" id="XUc-t8-GaD"/>
                 <outlet property="priceTextField" destination="OYX-OF-FcN" id="qcQ-Pr-hUI"/>
                 <outlet property="startButton" destination="K1N-4m-zb8" id="zDU-Mr-6qe"/>
                 <outlet property="termsSwitch" destination="ShC-FM-GqJ" id="bAv-Qz-GJk"/>

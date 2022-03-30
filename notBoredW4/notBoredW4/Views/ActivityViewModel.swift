@@ -16,27 +16,17 @@ class ActivityViewModel {
         self.activityService = service
     }
     
-//    func getActivity(participants: Int, completion: @escaping () -> Void) {
-//        activityService.getActivity(participants: participants) { [weak self] receivedActivity in
-//            guard let strongSelf = self else { return }
-//            strongSelf.currentActivity = receivedActivity
-//            completion()
-//        }
-//    }
-    
     func getActivity(forType type: String, participants: Int, completion: @escaping () -> Void) {
         activityService.getActivity(forType: type, participants: participants) { [weak self] receivedActivity in
             guard let strongSelf = self else { return }
-            if receivedActivity.activity != strongSelf.currentActivity?.activity {
-                strongSelf.currentActivity = receivedActivity
-            }
+            strongSelf.currentActivity = receivedActivity
             completion()
         }
     }
     
     func getCurrentActivity() -> String {
-        if let activity = self.currentActivity {
-            return activity.activity ?? " "
+        if let activity = self.currentActivity?.activity {
+            return activity
         }
         return "Error getting the activity"
     }
@@ -60,6 +50,20 @@ class ActivityViewModel {
             return activity.type ?? " "
         }
         return "Error getting the category"
+    }
+    
+    func hasError() -> Bool {
+        if (self.currentActivity?.error) != nil {
+            return true
+        }
+        return false
+    }
+    
+    func getError() -> String {
+        if let error = self.currentActivity?.error {
+            return error
+        }
+        return "No error found"
     }
 }
 

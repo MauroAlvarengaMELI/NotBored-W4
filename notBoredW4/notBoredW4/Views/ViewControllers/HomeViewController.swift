@@ -15,6 +15,7 @@ class HomeViewController: UIViewController {
     // MARK: Outlets
     @IBOutlet weak var participantsTextField: UITextField!
     @IBOutlet weak var priceTextField: UITextField!
+    @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var termsSwitch: UISwitch!
     @IBOutlet weak var startButton: UIButton!
     
@@ -23,6 +24,8 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor(patternImage: UIImage(named: "Background")!)
         setTextFieldDelegate()
+        priceTextField.isHidden = true
+        priceLabel.isHidden = true
     }
    
     //MARK: Actions

@@ -28,7 +28,6 @@ class SuggestionViewController: UIViewController {
         getParticipantsAndPrice()
         getActivity()
         
-        
         categoryStack.isHidden = false
     }
     
@@ -46,10 +45,14 @@ class SuggestionViewController: UIViewController {
         }
         viewModel.getActivity(forType: self.type, participants: participants) { [weak self] in
             guard let strongSelf = self else { return }
-            strongSelf.activityLabel.text = strongSelf.viewModel.getCurrentActivity()
-            strongSelf.participantsNumberLabel.text = ("\(strongSelf.viewModel.getParticipants())")
-            strongSelf.setPrice()
-            strongSelf.getCategory()
+            if strongSelf.viewModel.hasError() {
+                strongSelf.showError()
+            } else {
+                strongSelf.activityLabel.text = strongSelf.viewModel.getCurrentActivity()
+                strongSelf.participantsNumberLabel.text = ("\(strongSelf.viewModel.getParticipants())")
+                strongSelf.setPrice()
+                strongSelf.getCategory()
+            }
         }
     }
     
@@ -82,6 +85,16 @@ class SuggestionViewController: UIViewController {
 
     @IBAction func anotherButtonAction(_ sender: UIButton) {
         getActivity()
+    }
+    
+    private func showError() {
+        activityLabel.textColor = .systemRed
+        activityLabel.font = activityLabel.font?.withSize(30)
+        activityLabel.text = viewModel.getError()
+        categoryLabel.textColor = .systemRed
+        categoryLabel.text = "Error"
+        priceLabel.text = " "
+        participantsNumberLabel.text = " "
     }
     
 }
